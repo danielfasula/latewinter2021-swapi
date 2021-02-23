@@ -10,7 +10,8 @@ function _draw() {
   document.getElementById("app").innerHTML = /*html*/`
   <div className="card-columns characters">
       ${template}
-  </div>
+      </div>
+  <button class="btn btn-danger" onclick="app.charactersController.previous()">Previous</button>
   <button class="btn btn-primary" onclick="app.charactersController.next()">Next</button>
   `
 }
@@ -25,5 +26,9 @@ export default class CharactersController {
   next() {
     charactersService.next()
   }
+
+  // previous() {
+  //   charactersService.previous()
+  // }
 
 }

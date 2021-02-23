@@ -13,15 +13,39 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
-            <a class="navbar-brand" href="#">
-                <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
-                <span class="ml-2">swapi</span>
-            </a>
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                    type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
+                <button class="nav-link" id="nav-people-tab" data-bs-toggle="tab" data-bs-target="#nav-people"
+                    type="button" role="tab" aria-controls="nav-people" aria-selected="true">People</button>
+                <button class="nav-link" id="nav-planets-tab" data-bs-toggle="tab" data-bs-target="#nav-planets"
+                    type="button" role="tab" aria-controls="nav-planets" aria-selected="false">Planets</button>
+                <button class="nav-link" id="nav-ships-tab" data-bs-toggle="tab" data-bs-target="#nav-ships"
+                    type="button" role="tab" aria-controls="nav-ships" aria-selected="false">Ships</button>
+            </div>
         </nav>
     </header>
-    <main>
-        <div id="app"></div>
+    <main class="container-fluid tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active text-center mt-5" id="nav-home" role="tabpanel"
+            aria-labelledby="nav-home-tab">
+            <h1 class="mt-4"> <b> SWAPI </b> </h1>
+            <h3 class="mt-4">Any info on anything from Star Wars!</h3>
+            <h5>Click on a specific tab to find out more!</h5>
+        </div>
+
+        <div class="tab-pane fade mt-5" id="nav-people" role="tabpanel" aria-labelledby="nav-people-tab">
+            <div id="app"></div>
+        </div>
+
+        <div class="tab-pane fade mt-5" id="nav-planets" role="tabpanel" aria-labelledby="nav-planets-tab">
+            <div id="planets"></div>
+        </div>
+
+        <div class="tab-pane fade mt-5" id="nav-ships" role="tabpanel" aria-labelledby="nav-ships-tab">
+            <div id="ships"></div>
+        </div>
+
     </main>
     <footer class="container-fluid bg-dark text-light">
         <div class="row text-center">
@@ -30,6 +54,10 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="app/main.js" type="module"></script>
 </body>
